@@ -1,0 +1,60 @@
+$color: #c7fcca;
+
+%common {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;}
+
+.navigation {
+    @extend %common;
+    background-color: $color;
+    border: 1px solid grey;
+    width: 15%;
+    float: right;}
+
+.row > div{
+    @extend %common;
+    border: 2px solid black;
+    background-color: $color;}
+
+#description {
+    margin: 30px;}
+
+body {
+    margin:10px;
+
+h1 {
+    color: blue;}
+
+table {
+    @extend %common;
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    height: 300px;}
+
+th {
+    font-weight: bold;
+    background-color: $color; }
+
+th, td {
+    border: 1px solid black}
+
+}
+
+@media print {
+    .screen-only {
+        display: none;}
+}
+
+@media (min-width: 800px) {
+    #players_title::before {
+        content: "Best Tennis Players of the 21st Century";
+    }
+}
+
+@media (max-width: 799px) {
+    #players_title::before {
+         content: "Best Tennis Players";
+    }
+}
